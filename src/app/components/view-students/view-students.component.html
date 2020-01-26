@@ -1,0 +1,36 @@
+<mat-toolbar>
+    <span>My Application</span>
+</mat-toolbar>
+
+<div class="main-container">
+
+    <mat-card class="students-card">
+        <mat-card-title>
+            Students
+        </mat-card-title>
+
+        <table class="student-table" mat-table [dataSource]="students">
+
+            
+            <ng-container matColumnDef="regId">
+                <th mat-header-cell *matHeaderCellDef> Registration </th>
+                <td mat-cell *matCellDef="let user"> {{user.regId}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Name </th>
+                <td mat-cell *matCellDef="let user"> {{user.name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="address">
+                <th mat-header-cell *matHeaderCellDef> Address </th>
+                <td mat-cell *matCellDef="let user"> {{user.address}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+            <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+
+        </table>
+    </mat-card>
+
+</div>

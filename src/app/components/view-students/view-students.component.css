@@ -1,0 +1,13 @@
+.students-card {
+    width: 50%;
+    margin: 40px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+}
+
+.student-table {
+    width: 100%;
+}
